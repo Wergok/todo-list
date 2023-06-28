@@ -1,0 +1,25 @@
+.header {
+   background: $ColorLightPurple;
+   box-shadow: rgba($ColorWhite, $alpha: .2) 0px 10px 15px;
+   padding: 50px 0px 50px 0px;
+
+   &__form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__input {
+      flex: 0 0 80%;
+      color: $ColorWhite;
+      @extend %StyleText;
+      padding: 10px 0px 10px 15px;
+      background-color: transparent;
+      border: 2px $CololPink dashed;
+      border-radius: 3px;
+
+      &::placeholder {
+         color: $ColorWhite;
+      }
+   }
+}

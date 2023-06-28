@@ -1,0 +1,69 @@
+%StyleTextDisplay {
+    font-family: $mainFont;
+    font-size: rem(56);
+    font-weight: 700;
+    line-height: interest(64, 56);
+}
+
+%StyleTextH1 {
+    font-family: $mainFont;
+    font-size: rem(48);
+    font-weight: 700;
+    line-height: interest(64, 48);
+}
+
+%StyleTextH2 {
+    font-family: $mainFont;
+    font-size: rem(36);
+    font-weight: 700;
+    line-height: interest(48, 36);
+}
+
+%StyleTextH3 {
+    font-family: $mainFont;
+    font-size: rem(28);
+    font-weight: 700;
+    line-height: interest(36, 28);
+}
+
+%StyleTextH4 {
+    font-family: $mainFont;
+    font-size: rem(24);
+    font-weight: 700;
+    line-height: interest(32, 24);
+}
+
+%StyleTextH5 {
+    font-family: $mainFont;
+    font-size: rem(20);
+    font-weight: 700;
+    line-height: interest(32, 20);
+}
+
+%StyleText {
+    font-family: $mainFont;
+    font-size: rem(16);
+    font-weight: 700;
+    line-height: interest(24, 16);
+}
+
+%StyleTextBody1 {
+    font-family: $mainFont;
+    font-size: rem(16);
+    font-weight: 400;
+    line-height: interest(28, 16);
+}
+
+%StyleTextBody2 {
+    font-family: $mainFont;
+    font-size: rem(14);
+    font-weight: 400;
+    line-height: interest(20, 14);
+}
+
+%StyleTextLabel {
+    font-family: $mainFont;
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: interest(20, 14);
+}

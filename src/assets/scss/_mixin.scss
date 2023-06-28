@@ -1,0 +1,15 @@
+@function rem($size) {
+	$remSize: calc($size / $mainFontSize);
+	@return $remSize * 1rem;
+}
+
+@function interest($num1, $num2) {
+	$result: calc($num1 * 100% / $num2);
+	@return $result
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+	content: $content;
+	display: $display;
+	position: $pos;
+}

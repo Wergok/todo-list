@@ -1,0 +1,24 @@
+@import "_var.scss";
+@import "_mixin.scss";
+@import "_templates.scss";
+
+body {
+   background: $ColorBlack;
+}
+
+.container {
+   max-width: calc($containerWidth + 30px);
+   padding: 0px 15px 0px 15px;
+   margin: 0 auto;
+}
+
+.button {
+   background: transparent;
+   @extend %StyleText;
+   padding: 10px 20px 10px 20px;
+   border: 2px dashed $ColorWhite;
+   color: $ColorWhite
+}
+
+@import "blocks/_todo.scss";
+@import "blocks/_header.scss";
