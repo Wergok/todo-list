@@ -29,6 +29,7 @@ const path = {
       fonts: distPath + "assets/fonts/",
       js: distPath + "assets/js/",
       images: distPath + "assets/images/",
+      prodaction: "prodaction/",
    },
    src: {
       html: srcPath + "*.html",
@@ -49,7 +50,10 @@ const path = {
       fonts: srcPath + "assets/fonts/**/*.{eot, woff, woff2, ttf, svg}",
       tamplates: srcPath + "templates/**/*.html",
    },
-   clean: "./" + distPath,
+   clean: {
+      dist: "./" + distPath + "*",
+      server: distPath + "server",
+   },
 };
 
 function serve() {
@@ -59,6 +63,7 @@ function serve() {
       },
    });
 }
+
 function html() {
    panini.refresh();
    return src(path.src.html, { base: srcPath })
@@ -125,7 +130,7 @@ function js() {
       .pipe(dest(path.build.js))
       .pipe(browserSync.reload({ stream: true }));
 }
-function images(params) {
+function images() {
    return src(path.src.images, { base: srcPath + "assets/images/" })
       .pipe(
          imagemin([
@@ -141,8 +146,9 @@ function images(params) {
       .pipe(browserSync.reload({ stream: true }));
 }
 function clean() {
-   return del(path.clean);
+   return del([path.clean.dist, "!" + path.clean.server]);
 }
+
 function fonts() {
    return src(path.src.fonts, { base: srcPath + "assets/fonts/" }).pipe(
       browserSync.reload({ stream: true })

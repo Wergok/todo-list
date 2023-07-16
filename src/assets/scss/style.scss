@@ -1,15 +1,24 @@
 @import "_var.scss";
 @import "_mixin.scss";
 @import "_templates.scss";
+@import "_animation.scss";
 
 body {
    background: $ColorBlack;
+}
+
+.smoothAppearance {
+   animation: smoothAppearance 1.5s ease 0s 1;
 }
 
 .container {
    max-width: calc($containerWidth + 30px);
    padding: 0px 15px 0px 15px;
    margin: 0 auto;
+}
+
+.hiddenHeader {
+   transform: translateY(-100%);
 }
 
 .button {

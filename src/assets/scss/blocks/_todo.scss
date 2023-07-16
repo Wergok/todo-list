@@ -1,21 +1,22 @@
 .todo {
-   padding: 100px 0px 0px 0px;
+   padding: 200px 0px 0px 0px;
 
-   &__inner {}
-
-   &__list {}
+   &__list {
+      position: relative;
+   }
 
    &__list-item {
       display: flex;
+      position: absolute;
+      width: calc(100% - 50px);
+      top: 0px;
+      left: 0px;
       justify-content: space-between;
       align-items: center;
       padding: 25px;
       background: $CololPink;
       border-radius: 20px;
-
-      &:not(:last-child) {
-         margin: 0px 0px 25px 0px;
-      }
+      transition: all .4s;
    }
 
    &__list-text {
@@ -33,12 +34,25 @@
       align-items: center;
       position: relative;
 
+      @media (hover: hover) {
+         
+         &:hover span:nth-child(1) {
+            transform: rotate(180deg);
+         }
+
+         &:hover span:nth-child(2) {
+            transform: rotate(180deg);
+         }
+      
+      }
+
       span {
          position: absolute;
          background: $ColorBlack;
          width: 100%;
          height: 5px;
          border-radius: 50px;
+         transition: all .3s;
       }
 
       span:nth-child(1) {

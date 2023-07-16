@@ -1,0 +1,13 @@
+@keyframes smoothAppearance {
+   0% {
+      transform: translate(0px, -150%);
+   }
+
+   80% {
+      transform: translate(0px, 10%);
+   }
+
+   100% {
+      transform: translate(0px, 0px);
+   }
+}
